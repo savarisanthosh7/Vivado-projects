@@ -1,0 +1,22 @@
+# Vivado-generated project and simulation files
+.Xil/
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+*.gen/
+*.jou
+*.log
+*.wdb
+*.pb
+*.str
+*.vcd
+*.dmp
+*.rpt
+*.bit
+*.bin
+*.ltx
+*.xpr
+*.backup.*
