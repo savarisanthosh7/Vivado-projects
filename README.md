@@ -1,51 +1,62 @@
-# Vivado Projects
+# Vivado Projects — Digital Design in Verilog
 
-A collection of Verilog HDL designs for learning and practicing digital logic design, RTL coding, simulation, and verification using Xilinx Vivado.
+A structured collection of Verilog RTL projects for practicing combinational logic, sequential logic, finite-state machines, simulation, and FPGA-oriented verification.
 
-## Project Areas
+## Projects
 
-### Arithmetic Circuits
-- Half Adder
-- Full Adder
-- 3-bit Ripple Carry Adder
-- 4-bit Ripple Carry Adder
+| # | Project | Design type | Verification |
+|---|---|---|---|
+| 01 | Adders | Combinational / structural | Exhaustive testbenches |
+| 02 | 4:1 MUX & 1:4 DEMUX | Combinational | Exhaustive testbenches |
+| 03 | T Flip-Flop | Sequential | Reference-model testbench |
+| 04 | Moore 1011 Detector | Moore FSM | Directed + random checking |
+| 05 | Parking Lot Controller | FSM + counter | Capacity/entry/exit scenarios |
+| 06 | Vending Machine | Moore FSM | Multiple transaction scenarios |
 
-### Combinational Logic
-- 4:1 Multiplexer
-- 1:4 Demultiplexer
+## Repository structure
 
-### Sequential Logic
-- T Flip-Flop
-- Moore 1011 Sequence Detector
-
-### Applications
-- Vending Machine Controller
-- Smart Parking Lot Controller
-
-## Typical Project Files
-
-Each project should include the relevant Verilog design source and testbench. Simulation waveforms, truth tables, and synthesis reports are included only when available and checked.
+```
+Vivado-projects/
+├── 01_adders/
+│   ├── rtl/
+│   ├── testbench/
+│   └── README.md
+├── 02_mux_demux/
+│   ├── rtl/
+│   ├── testbench/
+│   └── README.md
+├── 03_t_flipflop/
+│   ├── rtl/
+│   ├── testbench/
+│   └── README.md
+├── 04_moore_1011_detector/
+│   ├── rtl/
+│   ├── testbench/
+│   └── README.md
+├── 05_parking_lot_controller/
+│   ├── rtl/
+│   ├── testbench/
+│   └── README.md
+├── 06_vending_machine/
+│   ├── rtl/
+│   ├── testbench/
+│   └── README.md
+└── docs/waveforms/
+```
 
 ## Tools
 
-- Xilinx Vivado
 - Verilog HDL
-- Vivado Simulator (XSim)
+- Xilinx Vivado
+- Icarus Verilog
+- VCD-compatible waveform viewers
 
-## Running a Project
+## Verification
 
-1. Open Vivado and create or open an RTL project.
-2. Add the design source file(s).
-3. Add the testbench under simulation sources.
-4. Run behavioral simulation.
-5. Inspect the waveform and compare the outputs with the expected behavior.
-6. Run synthesis when applicable and review the reports.
+The testbenches automatically compare DUT outputs against expected behavior. Generated Vivado build files and simulation artifacts should remain untracked through `.gitignore`.
 
-## Learning Goals
+## Author
 
-- Understand combinational and sequential circuits.
-- Practice writing and organizing Verilog RTL.
-- Verify designs with testbenches and simulation.
-- Learn finite-state-machine design through practical controllers.
+**Santhosh** — Electronics & Communication Engineering
 
-These projects are for educational use. Refer to each project folder for its specific implementation and verification details.
+Released under the MIT License.
