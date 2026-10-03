@@ -10,5 +10,3 @@ Hierarchical Verilog implementation of half adder, full adder, 3-bit ripple-carr
 
 ## Verification
 The testbenches exhaustively cover all possible input combinations: 8 full-adder vectors, 128 3-bit vectors, and 512 4-bit vectors.
-
-![Full adder waveform](../docs/waveforms/full_adder_tb.png)
