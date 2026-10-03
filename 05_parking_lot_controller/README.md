@@ -13,5 +13,3 @@ Default `CAPACITY` is 4 and can be changed through the Verilog parameter.
 
 ## Verification
 The testbench fills the lot, checks a refused fifth vehicle, removes and adds vehicles again, and checks an exit when empty.
-
-![Parking controller waveform](../docs/waveforms/tb_parking_lot_controller.png)
