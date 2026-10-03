@@ -14,5 +14,3 @@ Moore FSM for a single product priced at Rs. 10.
 - `refund5`
 
 The testbench covers direct Rs. 10 purchase, Rs. 5 + Rs. 5, Rs. 5 + Rs. 10 with change, cancellation, and unavailable-product behavior.
-
-![Vending machine waveform](../docs/waveforms/vending_machine_tb.png)
