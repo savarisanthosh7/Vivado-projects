@@ -8,5 +8,3 @@ Positive-edge triggered T flip-flop.
 | 1 | Toggle |
 
 The testbench maintains a reference model and checks `Q` and `Qbar` after clock edges.
-
-![T flip-flop waveform](../docs/waveforms/t_flipflop_tb.png)
