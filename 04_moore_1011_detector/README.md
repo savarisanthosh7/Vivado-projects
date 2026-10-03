@@ -11,5 +11,3 @@ A Moore FSM that detects the serial pattern `1011`. States represent useful pref
 
 ## Verification
 A reference-model testbench checks the DUT cycle-by-cycle and applies additional random input data.
-
-![Moore detector waveform](../docs/waveforms/tb_moore_1011.png)
