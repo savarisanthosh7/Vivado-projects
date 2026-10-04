@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330">
+<rect width="900" height="330" fill="#fff"/><text x="24" y="30" font-family="Arial" font-size="18" font-weight="bold" fill="#172554">Example digital timing waveform</text>
+<text x="24" y="58" font-family="Arial" font-size="13" fill="#b45309">REFERENCE ONLY — illustrative waveform, not a Vivado simulation output</text>
+<g stroke="#d1d5db" stroke-width="1"><path d="M150 90H850M150 150H850M150 210H850M150 270H850"/><path d="M220 75V290M290 75V290M360 75V290M430 75V290M500 75V290M570 75V290M640 75V290M710 75V290M780 75V290"/></g>
+<g font-family="Arial" font-size="14" fill="#111827"><text x="45" y="112">clk</text><text x="45" y="172">input</text><text x="45" y="232">output</text></g>
+<g fill="none" stroke-width="3" stroke-linejoin="round"><path d="M150 125H185V95H220V125H255V95H290V125H325V95H360V125H395V95H430V125H465V95H500V125H535V95H570V125H605V95H640V125H675V95H710V125H745V95H780V125H850" stroke="#2563eb"/><path d="M150 185H290V155H430V185H570V155H710V185H850" stroke="#0f766e"/><path d="M150 245H430V215H570V245H710V215H850" stroke="#9333ea"/></g>
+<g font-family="Arial" font-size="12" fill="#4b5563"><text x="150" y="310">Time →</text><text x="760" y="310">Conceptual signals</text></g></svg>
