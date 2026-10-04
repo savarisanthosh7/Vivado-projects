@@ -1,62 +1,49 @@
-# Vivado Projects — Digital Design in Verilog
+# Vivado Projects
 
-A structured collection of Verilog RTL projects for practicing combinational logic, sequential logic, finite-state machines, simulation, and FPGA-oriented verification.
+A beginner-friendly collection of digital logic projects written in Verilog and organized for learning and demonstration.
+
+These projects show how I design a circuit, simulate it, and check whether it works.
+
+![Simple digital design flow](docs/diagrams/project-flow.svg)
 
 ## Projects
 
-| # | Project | Design type | Verification |
-|---|---|---|---|
-| 01 | Adders | Combinational / structural | Exhaustive testbenches |
-| 02 | 4:1 MUX & 1:4 DEMUX | Combinational | Exhaustive testbenches |
-| 03 | T Flip-Flop | Sequential | Reference-model testbench |
-| 04 | Moore 1011 Detector | Moore FSM | Directed + random checking |
-| 05 | Parking Lot Controller | FSM + counter | Capacity/entry/exit scenarios |
-| 06 | Vending Machine | Moore FSM | Multiple transaction scenarios |
+| Project | What it does | Level |
+|---|---|---|
+| [Adders](01_adders/) | Adds binary numbers using half adders, full adders, and ripple adders. | Beginner |
+| [MUX and DEMUX](02_mux_demux/) | Selects one input or routes one input to an output line. | Beginner |
+| [T Flip-Flop](03_t_flipflop/) | Stores one bit and toggles it when enabled. | Beginner |
+| [Moore 1011 Detector](04_moore_1011_detector/) | Detects the bit pattern `1011` in a serial input. | Beginner–Intermediate |
+| [Parking Lot Controller](05_parking_lot_controller/) | Counts cars and controls entry/exit gates for a small parking area. | Intermediate |
+| [Vending Machine](06_vending_machine/) | Models a simple machine that accepts inputs and gives a product. | Intermediate |
 
-## Repository structure
+Each project folder contains:
+- `rtl/` — the Verilog circuit.
+- `testbench/` — a small test program that checks the circuit.
+- `README.md` — a plain-language explanation and how to run it.
 
+## Run a project
+
+You can use **Xilinx Vivado** to create a project, add the RTL and testbench files, and run behavioral simulation.
+
+If Icarus Verilog is installed, you can also run the test suite from the repository folder:
+
+```bash
+make test
 ```
-Vivado-projects/
-├── 01_adders/
-│   ├── rtl/
-│   ├── testbench/
-│   └── README.md
-├── 02_mux_demux/
-│   ├── rtl/
-│   ├── testbench/
-│   └── README.md
-├── 03_t_flipflop/
-│   ├── rtl/
-│   ├── testbench/
-│   └── README.md
-├── 04_moore_1011_detector/
-│   ├── rtl/
-│   ├── testbench/
-│   └── README.md
-├── 05_parking_lot_controller/
-│   ├── rtl/
-│   ├── testbench/
-│   └── README.md
-├── 06_vending_machine/
-│   ├── rtl/
-│   ├── testbench/
-│   └── README.md
-└── docs/waveforms/
-```
+
+To understand a project, start with its README, then open the RTL file, and finally run its testbench. You do not need to understand the scripts or automation files to learn the circuits.
 
 ## Tools
 
 - Verilog HDL
 - Xilinx Vivado
-- Icarus Verilog
-- VCD-compatible waveform viewers
+- Icarus Verilog (optional, for command-line simulation)
 
-## Verification
-
-The testbenches automatically compare DUT outputs against expected behavior. Generated Vivado build files and simulation artifacts should remain untracked through `.gitignore`.
+This repository is a learning portfolio of digital design exercises. The projects are intended for simulation and learning; FPGA board deployment may require pin constraints and board-specific setup.
 
 ## Author
 
-**Santhosh** — Electronics & Communication Engineering
+**Santhosh** · Electronics and Communication Engineering
 
 Released under the MIT License.
