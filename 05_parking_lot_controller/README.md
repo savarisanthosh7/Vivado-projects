@@ -4,6 +4,8 @@ A small digital system that keeps track of cars in a parking area.
 
 ![Parking controller state flow](docs/state-flow.svg)
 
+> **Diagram note:** This is a simplified reference diagram to help understand the controller's behavior. It is not a Vivado screenshot or simulation output. The actual signal behavior should be checked in the Vivado waveform.
+
 ## What it does
 
 - Opens the entry gate when a space is available.
