@@ -4,6 +4,8 @@ This circuit watches a stream of 0s and 1s. When it sees the pattern **1011**, i
 
 ![Sequence detector flow](docs/sequence-flow.svg)
 
+> **Diagram note:** This is a simplified reference diagram for understanding the sequence states. It is not a Vivado screenshot or simulation output. Use the actual Vivado waveform to inspect simulated input, state, and output signals.
+
 ## How it works
 
 The circuit remembers how much of the pattern it has matched:
