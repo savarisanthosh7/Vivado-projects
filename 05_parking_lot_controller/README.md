@@ -1,15 +1,33 @@
-# 05 — Parking Lot Controller
+# Parking Lot Controller
 
-FSM-based parking controller with configurable capacity.
+A small digital system that keeps track of cars in a parking area.
 
-## Behavior
-- Accept entry while space is available.
-- Accept exit while at least one vehicle is present.
-- Assert `full` at capacity.
-- Refuse additional entries while full.
-- Pulse `entry_gate` and `exit_gate` through the corresponding FSM states.
+![Parking controller state flow](docs/state-flow.svg)
 
-Default `CAPACITY` is 4 and can be changed through the Verilog parameter.
+## What it does
 
-## Verification
-The testbench fills the lot, checks a refused fifth vehicle, removes and adds vehicles again, and checks an exit when empty.
+- Opens the entry gate when a space is available.
+- Increases the car count when a car enters.
+- Opens the exit gate when a car leaves.
+- Turns on the `full` signal when the lot reaches its capacity.
+- Blocks new entries when the lot is full.
+
+The default capacity is **4 cars**. The value can be changed using the `CAPACITY` parameter.
+
+## Main signals
+
+| Signal | Meaning |
+|---|---|
+| `clk` | Clock that synchronizes the controller |
+| `reset` | Resets the car count and state |
+| `entry_sensor` | Indicates a car at the entrance |
+| `exit_sensor` | Indicates a car at the exit |
+| `entry_gate` / `exit_gate` | Gate control outputs |
+| `count` | Number of cars currently inside |
+| `full` | Indicates that the lot is full |
+
+## Try it
+
+Open the RTL and testbench files in Vivado, then run **Behavioral Simulation**. The testbench checks filling the lot, rejecting an extra car, letting cars leave, and handling an exit request when the lot is empty.
+
+**Files:** `rtl/parking_lot_controller.v` is the circuit; `testbench/tb_parking_lot_controller.v` tests it.
